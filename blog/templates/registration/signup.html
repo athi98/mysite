@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if errors %}
+   <p>{{ errors }}</p>
+{% endif %}
+<form method="POST" action="">
+    {% csrf_token %}
+
+    <br>
+    firstname<br>
+    <input type="text" name="firstname" placeholder="firstname">
+    <br>lastname<br>
+    <input type="text" name="lastname" placeholder="lastname">
+    <br>email<br>
+    <input type="email" name="email" placeholder="email">
+    <br>username<br>
+    <input type="text" name="username" placeholder="username">
+    <br>new_password<br>
+    <input type="password" name="password1" placeholder="password1">
+    <br>new_password<br>
+    <input type="password" name="password2" placeholder="confirm password">
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>
